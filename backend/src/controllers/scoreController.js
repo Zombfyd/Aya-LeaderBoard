@@ -24,7 +24,7 @@ exports.getLeaderboard = async (req, res) => {
     const leaderboard = await Score.findAll({
       attributes: ['playerWallet', 'score'],
       order: [['score', 'DESC']],
-      limit: 100
+      limit: 1000
     });
 
     res.json(leaderboard);
